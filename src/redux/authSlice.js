@@ -33,6 +33,9 @@ const authSlice = createSlice({
       state.isLoggedIn = true;
       state.isRefreshing = false;
     },
+    [refreshCurrentUser.rejected](state) {
+      state.isRefreshing = false;
+    },
   },
 });
 export const authReducer = authSlice.reducer;
