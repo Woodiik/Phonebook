@@ -29,7 +29,7 @@ export const DeleteButton = styled.button`
     transform: scale(0.9);
   }
   :disabled {
-    background-color: rgb(128, 128, 128, 0.5);
+    background-color: rgb(128, 128, 127, 0.5);
   }
 `;
 
