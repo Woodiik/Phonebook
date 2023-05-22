@@ -1,9 +1,9 @@
 import { PrivateRoute } from 'components/PrivateRoute';
 import { RestrictedRoute } from 'components/RestrctedRoute';
-import { Contacts } from 'pages/contacts/contacts';
+import { Contacts } from 'pages/Contacts/Contacts';
 import { Home } from 'pages/Home/Home';
-import { LogIn } from 'pages/login/Login';
-import { Register } from 'pages/register/Register';
+import { LogIn } from 'pages/Login/Login';
+import { Register } from 'pages/Register/Register';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
