@@ -8,7 +8,7 @@ import {
 import { Input } from 'components/Filter/Filter.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { getContacts, getIsLoading } from 'redux/selectors';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contactsOperations';
 
 export function Form() {
   const [name, setName] = useState('');

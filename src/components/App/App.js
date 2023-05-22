@@ -1,10 +1,17 @@
 import { Contacts } from 'pages/contacts/contacts';
 import { LogIn } from 'pages/login/Login';
 import { Register } from 'pages/register/register';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import { refreshCurrentUser } from 'redux/authOperations';
 import { Layout } from '../SharedLayout/SharedLayout';
 
 export function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshCurrentUser());
+  }, [dispatch]);
   return (
     <>
       <Routes>

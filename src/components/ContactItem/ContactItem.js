@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contactsOperations';
 import { DeleteButton, ListItem, Loader } from './ContactItem.styled';
 import { useSelector } from 'react-redux';
 import { getIsLoading } from 'redux/selectors';
