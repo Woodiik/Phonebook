@@ -1,23 +1,24 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+
 import { ClipLoader } from 'react-spinners';
 
-export const ListItem = styled.li`
+export const FormStyles = styled.form`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  :not(:last-child) {
-    margin-bottom: 10px;
-  }
-  border: 1px solid #696969;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 `;
-
-export const DeleteButton = styled.button`
+export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+`;
+export const SignUpButton = styled.button`
   position: relative;
-  width: 100px;
-  height: 32px;
   padding: 8px;
-  margin-left: 8px;
   background-color: #808080;
   color: white;
   border: none;

@@ -1,29 +1,33 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { logOut } from 'redux/authOperations';
-import { getIsLoggedIn } from 'redux/selectors';
-import { Header } from './SharedLayout.styled';
+import { getIsLoggedIn, getUserName } from 'redux/selectors';
+import { Header, Link, LogOutButton, UserMenu } from './SharedLayout.styled';
 export const Layout = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
+  const user = useSelector(getUserName);
   const dispatch = useDispatch();
   return (
     <div>
       <Header>
         <div>
-          <NavLink to={'/'}>Home</NavLink>
-          <NavLink to={'/contacts'}>Contacts</NavLink>
+          <Link to={'/'}>Home</Link>
+          <Link to={'/contacts'}>Contacts</Link>
         </div>
         {isLoggedIn ? (
-          <div>
-            <h3>User menu</h3>
-            <button type="button" onClick={() => dispatch(logOut())}>
+          <UserMenu>
+            <h3>Welcome, {user}!</h3>
+            <LogOutButton
+              type="LogOutButton"
+              onClick={() => dispatch(logOut())}
+            >
               Log Out
-            </button>
-          </div>
+            </LogOutButton>
+          </UserMenu>
         ) : (
           <div>
-            <NavLink to={'/register'}>Sign Up</NavLink>
-            <NavLink to={'/login'}>Log In</NavLink>
+            <Link to={'/register'}>Sign Up</Link>
+            <Link to={'/login'}>Log In</Link>
           </div>
         )}
       </Header>

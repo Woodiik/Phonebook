@@ -5,5 +5,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fafafa;
+`;
+export const ContactListThumb = styled.div`
+  margin-top: 40px;
+  text-align: center;
+  background-color: #dcdcdc;
 `;

@@ -18,6 +18,7 @@ export const AddContactButton = styled.button`
   background-color: #808080;
   color: white;
   border: none;
+  transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
   :hover {
     background-color: #696969;
   }

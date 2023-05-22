@@ -13,10 +13,15 @@ export const ContactList = () => {
 
   return (
     <List>
-      {visibleContacts.length > 0 &&
+      {visibleContacts.length > 0 ? (
         visibleContacts.map(contact => {
           return <ContactItem key={contact.id} contact={contact} />;
-        })}
+        })
+      ) : visibleContacts.length === contacts.length ? (
+        <h3>You have no contacts in your phonebook</h3>
+      ) : (
+        <h3>You have no contacts by your filter</h3>
+      )}
     </List>
   );
 };
