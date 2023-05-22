@@ -7,8 +7,6 @@ export const Register = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const dispatch = useDispatch();
-  const store = useSelector(state => state);
-  console.log(store);
   const handleChange = e => {
     const { name, value } = e.target;
 

@@ -10,7 +10,7 @@ export const Layout = () => {
     <div>
       <Header>
         <div>
-          <NavLink to={'/home'}>Home</NavLink>
+          <NavLink to={'/'}>Home</NavLink>
           <NavLink to={'/contacts'}>Contacts</NavLink>
         </div>
         {isLoggedIn ? (
