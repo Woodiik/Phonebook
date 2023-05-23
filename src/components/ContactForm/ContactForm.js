@@ -41,8 +41,8 @@ export function Form() {
 
     if (contactMap.every(el => el === true)) {
       dispatch(addContact({ name, number }));
+      reset();
     }
-    reset();
   };
   const reset = () => {
     setName('');
